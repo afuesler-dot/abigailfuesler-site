@@ -1,0 +1,15 @@
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# local preview
+__pycache__/
+
+# originals, keep exports only
+*.psd
+*.xcf
+*.ARW
+*.CR2
+*.dng
