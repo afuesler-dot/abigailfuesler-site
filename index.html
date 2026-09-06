@@ -562,8 +562,8 @@
     <div class="about-grid">
       <div class="about-text reveal">
         <p class="lede-first">Abi Fuesler is a Ph.D. student in Forest and Conservation Sciences at the University of Montana and a research assistant in the <a href="https://www.warmlab.org">Wildland and Recreation Management (WARM) Research Lab</a>, led by Dr. Will Rice.</p>
-        <p>Her path to research ran through the deserts of Southern California and the mountains of western North Carolina: first as a camper, then a summer camp director, and eventually a graduate student in experiential and outdoor education at Western Carolina University. Her master's thesis examined how graduating from an undergraduate outdoor academic program shapes the lives and careers of its alumni.</p>
-        <p>Today her work centers on recreation allocation, the systems that decide who gets access when demand outstrips a place. She is equally drawn to the softer questions alongside the policy: the social scripts of outdoor adventure, the rise of the e-bike, and what it means to recreate sober. When she steps away from the work, she can be found reading, playing soccer, or riding bikes.</p>
+        <p>Her path to research ran through the deserts of Southern California and the mountains of western North Carolina: first as a camper, then a summer camp director, and eventually a graduate student in Experiential & Outdoor Education at Western Carolina University. Her thesis examined how graduating from an undergraduate outdoor academic program shapes alumni lives and careers.</p>
+        <p>Today her work centers on recreation allocation: the systems that decide who gets access when demand exceeds supply to a recreation area. She is also drawn to questions about the social scripts of outdoor adventure, particularly as they relate to the rise of the e-bike. When she steps away from the work, she can be found reading or riding bikes.</p>
       </div>
 
       <div class="reveal">
@@ -655,9 +655,8 @@
     <p class="eyebrow">Contact</p>
     <a class="contact-email" href="mailto:abigail.fuesler@umconnect.umt.edu">abigail.fuesler@umconnect.umt.edu</a>
     <div class="foot-links">
-      <a href="cv.pdf">Curriculum Vitae</a>
+      <a href="cv.pdf">Vitae</a>
       <a href="https://scholar.google.com/citations?user=XVmwwLAAAAAJ&amp;hl=en">Google Scholar</a>
-      <a href="https://www.researchgate.net/profile/Abigail-Fuesler">ResearchGate</a>
       <a href="https://www.warmlab.org">WARM Lab</a>
     </div>
     <div class="foot-meta">
@@ -685,12 +684,12 @@
      featured : true puts it in the two big cards up top.
      type     : groups the full list. Use one of:
                 "Peer-reviewed article", "Technical report",
-                "Conference & thesis".
+                "Conference".
      link     : a web address, or leave as "" for no link.
   ------------------------------------------------------------------- */
   const PUBLICATIONS = [
     {
-      featured: true,
+      featured: false,
       type: "Technical report",
       year: "2025",
       title: "Alpine Lakes Wilderness: Recreation Allocation Study",
@@ -700,7 +699,7 @@
       linkLabel: "Read the report (PDF)"
     },
     {
-      featured: true,
+      featured: false,
       type: "Technical report",
       year: "2025",
       title: "Palomar Ranger District: Recreation Allocation Study",
@@ -710,7 +709,17 @@
       linkLabel: "Read the report (PDF)"
     },
     {
-      featured: false,
+      featured: true,
+      type: "Peer-reviewed article",
+      year: "2025",
+      title: "Dry and outside: The rise of sober outdoor recreation experiences",
+      authors: "Fuesler, A. & Rice, W. L.
+      venue: "Leisure Sciences",
+      link: "https://doi.org/10.1080/01490400.2025.2563810",
+      linkLabel: "View article"
+    },
+    {
+      featured: true,
       type: "Peer-reviewed article",
       year: "2025",
       title: "A systematic review of visitor preferences concerning recreation allocation",
@@ -720,24 +729,14 @@
       linkLabel: "View article"
     },
     {
-      featured: false,
-      type: "Conference & thesis",
+      featured: true,
+      type: "Peer-reviewed article",
       year: "2025",
-      title: "Alumni perspectives of outdoor academic program components",
-      authors: "Fuesler, A., Bobilya, A. J., Daniel, B., et al.",
-      venue: "UM Graduate Student Research Conference (GradCon) \u00b7 Poster",
-      link: "https://scholarworks.umt.edu/gsrc/2025/posters/4/",
-      linkLabel: "View poster"
-    },
-    {
-      featured: false,
-      type: "Conference & thesis",
-      year: "2024",
-      title: "Career impact of undergraduate outdoor academic programs (M.S. thesis)",
-      authors: "Fuesler, A.",
+      title: "Alumni perspectives of the life significance of attending an undergraduate outdoor academic program",
+      authors: "Fuesler, A., Bobilya, A. J., Daniel, B., & Hobbs, W.",
       venue: "Experiential & Outdoor Education, Western Carolina University",
-      link: "",
-      linkLabel: ""
+      link: "https://doi.org/10.18666/JOREL-2025-12571",
+      linkLabel: "View article"
     }
   ];
 
@@ -746,7 +745,7 @@
      next to this file. Edit the caption and place for each.
   ------------------------------------------------------------------- */
   const GALLERY = [
-    { file: "photo-1.jpg", caption: "Field data collection", place: "Alpine Lakes, WA" },
+    { file: "photo-1.jpg", caption: "Field data collection",  place: "Alpine Lakes, WA" },
     { file: "photo-2.jpg", caption: "Trailhead survey",       place: "Bitterroot NF, MT" },
     { file: "photo-3.jpg", caption: "On the water",           place: "Western Montana" },
     { file: "photo-4.jpg", caption: "Backcountry",            place: "Bob Marshall Wild." },
@@ -758,9 +757,8 @@
      Newest at the top. Edit freely.
   ------------------------------------------------------------------- */
   const NEWS = [
-    { date: "2025", text: "Two Forest Service recreation allocation studies published, for the Alpine Lakes Wilderness and the Palomar Ranger District." },
-    { date: "2025", text: "Co-authored a systematic review of visitor preferences for recreation allocation in Socio-Ecological Practice Research." },
-    { date: "2025", text: "Presented alumni outcomes of outdoor academic programs at UM GradCon." }
+    { date: "2026", text: "Trail crossing ahead: Montana's e-bike debate picks up speed" },
+    { date: "2026", text: "E-bikes in the Wild: UM Doctoral Student Studies Growing Trail Trend" }
   ];
 
   /* ================================================================
