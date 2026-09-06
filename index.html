@@ -19,12 +19,12 @@
   2. ADD A NEWS ITEM
      Same place, in the NEWS list. Newest goes at the top.
 
-  4. YOUR PHOTO
+  3. YOUR PHOTO
      Save a portrait as  abi.jpg  in the same folder as this file.
      Until then, a designed placeholder shows in its place.
      Gallery photos go in as  photo-1.jpg ... photo-6.jpg.
 
-  6. HOSTING
+  4. HOSTING
      This is one self-contained file. Push it to GitHub Pages
      (or drop the folder on Netlify). A custom domain can be
      pointed at it later.
@@ -345,24 +345,6 @@
   @media (max-width:780px){ .about-grid{ grid-template-columns:1fr; gap:2.4rem; } }
 
   /* ===============================================================
-     RESEARCH  (themed areas, question-framed)
-     =============================================================== */
-  .areas{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; }
-  .area{
-    background:var(--paper-2);
-    border:1px solid var(--line);
-    border-top:4px solid var(--pine);
-    padding:1.9rem 1.6rem;
-    display:flex; flex-direction:column;
-  }
-  .area:nth-child(2){ border-top-color:var(--brown); }
-  .area:nth-child(3){ border-top-color:var(--gold); }
-  .area-tag{ font-family:var(--font-mono); font-size:.66rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin-bottom:.9rem; }
-  .area h3{ font-family:var(--font-display); font-weight:700; font-size:1.28rem; line-height:1.1; margin:0 0 .8rem; color:var(--ink); }
-  .area p{ margin:0; font-size:.98rem; color:#3a3524; }
-  @media (max-width:820px){ .areas{ grid-template-columns:1fr; } }
-
-  /* ===============================================================
      PUBLICATIONS
      =============================================================== */
   .featured{ display:grid; grid-template-columns:1fr 1fr; gap:1.4rem; margin-bottom:3rem; }
@@ -476,43 +458,16 @@
       <div class="about-text reveal">
         <p class="lede-first">Abi Fuesler is a Ph.D. student in Forest and Conservation Sciences at the University of Montana and a research assistant in the <a href="https://www.warmlab.org">Wildland and Recreation Management (WARM) Research Lab</a>, led by Dr. Will Rice.</p>
         <p>Her path to research ran through the deserts of Southern California and the mountains of western North Carolina: first as a camper, then a summer camp director, and eventually a graduate student in Experiential & Outdoor Education at Western Carolina University. Her thesis examined how graduating from an undergraduate outdoor academic program shapes alumni lives and careers.</p>
-        <p>Today her work centers on recreation allocation: the systems that decide who gets access when demand exceeds supply to a recreation area. She is also drawn to questions about the social scripts of outdoor adventure, particularly as they relate to the rise of the e-bike. When she steps away from the work, she can be found reading or riding bikes.</p>
+        <p>Today her work centers on recreation allocation: the systems that decide who gets access when demand exceeds supply to a recreation area. She is also drawn to questions about the social scripts of outdoor adventure, particularly as they relate to the rise of the e-bike. </p>
+        <p>In addition to her research, Abi remains passionate about facilitation and experiential education. When she steps away from the work, she can be found reading or riding bikes.</p>
       </div>
 
       <div class="reveal">
         <figure class="portrait-frame" style="margin:0;">
-          <!-- Add a portrait named abi.jpg next to this file. Until then the placeholder below shows. -->
           <img class="portrait" src="abi.jpg" alt="Portrait of Abigail Fuesler"
                onerror="this.outerHTML='&lt;div class=&quot;portrait-ph&quot;&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;span&gt;AF&lt;/span&gt;&lt;br&gt;&lt;small&gt;Add abi.jpg&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;'">
           <figcaption class="portrait-cap"><span>A. Fuesler</span><span>Missoula, MT</span></figcaption>
         </figure>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================
-     RESEARCH  (three areas, framed as questions)
-     ================================================================ -->
-<section class="band" id="research">
-  <div class="wrap">
-    <p class="eyebrow reveal">Research</p>
-    <h2 class="head reveal">Three questions, one throughline:<br>how people share the outdoors.</h2>
-    <div class="areas">
-      <div class="area reveal">
-        <div class="area-tag">Area / Allocation</div>
-        <h3>Recreation Allocation</h3>
-        <p>When visitation climbs, managers may ration access through permits, lotteries, and advance reservation systems. How should these opportunities be shared fairly and efficiently, and what do visitors themselves prefer?</p>
-      </div>
-      <div class="area reveal">
-        <div class="area-tag">Area / Culture</div>
-        <h3>Outdoor Social Scripts</h3>
-        <p>Unwritten rules shape who belongs outside and how people behave there, from the arrival of the e-bike to the meaning of alcohol use in recreation. How do these cultural scripts form, and who do they quietly include or exclude?</p>
-      </div>
-      <div class="area reveal">
-        <div class="area-tag">Area / Pathways</div>
-        <h3>Outdoor Education &amp; Careers</h3>
-        <p>Outdoor academic programs promise to shape lives long after graduation. How does the experience of earning this degree echo through the careers alumni go on to build?</p>
       </div>
     </div>
   </div>
@@ -610,7 +565,7 @@
       authors: "Fuesler, A., Rice, W. L., Armatas, C. A., & Johnson, H. A.",
       venue: "Univ. of Montana WARM Lab \u00b7 USDA Forest Service",
       link: "https://research.fs.usda.gov/download/treesearch/80472.pdf",
-      linkLabel: "Read the report (PDF)"
+      linkLabel: "Read the report"
     },
     {
       featured: true,
@@ -620,7 +575,7 @@
       authors: "Fuesler, A., Rice, W. L., Armatas, C. A., Phillips, K. E., & Omolara, P.",
       venue: "Univ. of Montana WARM Lab \u00b7 USDA Forest Service",
       link: "https://research.fs.usda.gov/download/treesearch/80206.pdf",
-      linkLabel: "Read the report (PDF)"
+      linkLabel: "Read the report"
     },
     {
       featured: true,
@@ -700,7 +655,7 @@
   /* grouped full list */
   (function(){
     const host = document.getElementById('pub-list');
-    const order = ["Peer-reviewed article","Technical report","Conference & thesis"];
+    const order = ["Peer-reviewed article","Technical report","Conference"];
     order.forEach(group => {
       const items = PUBLICATIONS.filter(p => p.type === group);
       if(!items.length) return;
