@@ -704,6 +704,7 @@
   /* mobile nav toggle: shows/hides the nav-links dropdown under 680px */
   (function(){
     const nav = document.querySelector('.nav');
+    if(!nav) return;
     const toggle = nav.querySelector('.nav-toggle');
     const links = nav.querySelector('.nav-links');
     toggle.addEventListener('click', () => {
