@@ -692,12 +692,13 @@
     });
   })();
 
-  /* news */
+   /* news */
   (function(){
     const host = document.getElementById('news-list');
     NEWS.forEach(n => {
+      const text = n.link ? `<a href="${esc(n.link)}">${esc(n.text)}</a>` : esc(n.text);
       host.insertAdjacentHTML('beforeend',
-        `<div class="note"><div class="date">${esc(n.date)}</div><p>${esc(n.text)}</p></div>`);
+        `<div class="note"><div class="date">${esc(n.date)}</div><p>${text}</p></div>`);
     });
   })();
 
