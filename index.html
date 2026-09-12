@@ -450,9 +450,9 @@
     <div class="nav-links">
       <a href="mailto:abigail.fuesler@umconnect.umt.edu">Email</a>
       <a href="cv.pdf" target="_blank">Vitae</a>
-      <a href="https://www.linkedin.com/in/abifuesler/">LinkedIn</a>
-      <a href="https://scholar.google.com/citations?user=XVmwwLAAAAAJ&amp;hl=en">Google Scholar</a>
-      <a href="https://www.warmlab.org">WARM Lab</a>
+      <a href="https://www.linkedin.com/in/abifuesler/" target="_blank">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=XVmwwLAAAAAJ&amp;hl=en" target="_blank">Google Scholar</a>
+      <a href="https://www.warmlab.org" target="_blank">WARM Lab</a>
     </div>
     <button class="nav-toggle" aria-expanded="false">Menu</button>
   </div>
@@ -647,7 +647,7 @@
   (function(){
     const host = document.getElementById('featured-pubs');
     PUBLICATIONS.filter(p => p.featured).forEach(p => {
-      const link = p.link ? `<a class="readlink" href="${esc(p.link)}">${esc(p.linkLabel||'Read')}</a>` : '';
+      const link = p.link ? `<a class="readlink" href="${esc(p.link)}" target="_blank">${esc(p.linkLabel||'Read')}</a>` : '';
       host.insertAdjacentHTML('beforeend',
         `<article class="fcard">
            <div class="kind">${esc(p.type)} \u00b7 ${esc(p.year)}</div>
@@ -666,7 +666,7 @@
       const items = PUBLICATIONS.filter(p => p.type === group);
       if(!items.length) return;
       const rows = items.map(p => {
-        const go = p.link ? ` <a class="go" href="${esc(p.link)}">${esc(p.linkLabel||'Link')}</a>` : '';
+        const go = p.link ? ` <a class="go" href="${esc(p.link)}" target="_blank">${esc(p.linkLabel||'Link')}</a>` : '';
         return `<div class="pub">
                   <div class="yr">${esc(p.year)}</div>
                   <div>
@@ -702,7 +702,7 @@
   (function(){
     const host = document.getElementById('news-list');
     NEWS.forEach(n => {
-      const text = n.link ? `<a href="${esc(n.link)}">${esc(n.text)}</a>` : esc(n.text);
+      const text = n.link ? `<a href="${esc(n.link)}" target="_blank">${esc(n.text)}</a>` : esc(n.text);
       host.insertAdjacentHTML('beforeend',
         `<div class="note"><div class="date">${esc(n.date)}</div><p>${text}</p></div>`);
     });
